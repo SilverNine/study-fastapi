@@ -1,21 +1,25 @@
 # env
 
-virtualenv -p python3 ~/python-env/study-fastapi
+virtualenv -p python3 ~/python-env/981park-operation-know
 
-source ~/python-env/study-fastapi/bin/activate
+source ~/python-env/981park-operation-know/bin/activate
 
 # first init
 
-pip install fastapi
+pip3 install fastapi
 
-pip install 'uvicorn[standard]'
+pip3 install 'uvicorn[standard]'
 
-pip freeze > requirements.txt
+pip3 install gunicorn
+
+pip3 freeze > requirements.txt
 
 # init
 
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 
-# start app
+# local - start app
 
-uvicorn main:app --reload
+uvicorn main:app --reload --host 0.0.0.0 --port 8000
+
+gunicorn main:app --workers 4 --worker-class uvicorn.workers.UvicornWorker --bind 0.0.0.0:8080
