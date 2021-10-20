@@ -5,3 +5,7 @@ source ~/python-env/study-fastapi/bin/activate
 pip install fastapi
 
 pip install 'uvicorn[standard]'
+
+pip freeze > requirements.txt
+
+uvicorn main:app --reload
