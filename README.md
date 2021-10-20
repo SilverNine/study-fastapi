@@ -1,8 +1,8 @@
 # env
 
-virtualenv -p python3 ~/python-env/981park-operation-know
+virtualenv -p python3 ~/python-env/study-fastapi
 
-source ~/python-env/981park-operation-know/bin/activate
+source ~/python-env/study-fastapi/bin/activate
 
 # first init
 
