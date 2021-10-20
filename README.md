@@ -1,7 +1,7 @@
-# virtualenv -p python3 ~/python-env/study-fastapi
+## virtualenv -p python3 ~/python-env/study-fastapi
 
-# source ~/python-env/study-fastapi/bin/activate
+## source ~/python-env/study-fastapi/bin/activate
 
-# pip install fastapi
+## pip install fastapi
 
-# pip install 'uvicorn[standard]'
+## pip install 'uvicorn[standard]'
